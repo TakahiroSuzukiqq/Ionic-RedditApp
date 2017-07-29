@@ -7,5 +7,10 @@
 </ion-header>
 
 <ion-content padding>
-　　　This is home 
+  This is home(reddit)
+     <ion-list>  <!-- want list-->
+       <ion-item *ngFor="let item of items">   <!-- *ngFor: for loop-->
+          <h2>{{item.data.title}}</h2>
+       </ion-item>
+     </ion-list>
 </ion-content>

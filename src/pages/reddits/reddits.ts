@@ -20,7 +20,7 @@ export class RedditsPage {
 
   getPosts(category, limit) {
     this.redditService.getPosts(category, limit).subscribe(response => {
-    //  console.log(response);
+      console.log(response);
     this.items = response.data.children;    //get "children" data from fetched reddit data
     });
 

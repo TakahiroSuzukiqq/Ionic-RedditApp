@@ -12,16 +12,17 @@ export class RedditsPage {
 
   }
 
-  ngOnIt(){  //lifecycle hook
-    console.log('onInit ran...');
-    // this.getPosts('sports', 5);
+  ngOnInit() {  //lifecycle hook
+    // console.log('onInit ran...');
+    this.getPosts('sports', 5);
   }
 
-  // getPosts(category, limit) {
-  //   this.redditService.getPosts(category, limit).subscribe(response => {
-  //     console.log(response);
-  //   });
-  // }
+  getPosts(category, limit) {
+    this.redditService.getPosts(category, limit).subscribe(response => {
+      console.log(response);
+    });
+    
+  }
 }
 
 //memo

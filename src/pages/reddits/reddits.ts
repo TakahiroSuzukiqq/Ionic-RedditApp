@@ -8,15 +8,23 @@ import { DetailsPage } from '../details/details';
   templateUrl: 'reddits.html'
 })
 export class RedditsPage {
-  items: any;
-
+  items: any;      //set category as property
+  category: any;  
+  limit: any;
   constructor(public navCtrl: NavController, private redditService: RedditService) {
+    this.getDefaults();
 
   }
 
   ngOnInit() {  //lifecycle hook
     // console.log('onInit ran...');
-    this.getPosts('sports', 5);
+    //this.getPosts('sports', 10);
+    this.getPosts(this.category, this.limit);   //the default category is sport, display llimit is 10
+  }
+
+  getDefaults() {
+    this.category = 'sports';
+    this.limit = 10;
   }
 
   getPosts(category, limit) {
@@ -30,6 +38,10 @@ export class RedditsPage {
     this.navCtrl.push(DetailsPage, {     //push = go to the DetailsPage when the button is clicked
       item: item                         //pass the item param
     });
+  }
+  
+  changeCategory() {
+    this.getPosts(this.category, this.limit); 
   }
 
 }

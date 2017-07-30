@@ -1,11 +1,27 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      Details
+      {{item.title}}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-　　　This is details
+　　　<ion-card>
+  <img src="{{item.preview.images[0].source.url}}"/>   <!--we want the first image in an array so [0]-->
+    <ion-card-content>
+    <ion-card-title>
+        {{item.title}}
+        </ion-card-title>
+        <ion-list>
+            <ion-item>
+                <ion-icon name="person" item-left></ion-icon>
+                Author
+                <ion-note item-right>
+                    {{item.author}}
+                </ion-note>
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+    </ion-card>
 </ion-content>

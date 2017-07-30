@@ -11,4 +11,4 @@
     
 # Ionic Docs  
  * [Installation](http://ionicframework.com/docs/intro/installation/)  
- * [Components & Styling](https://ionicframework.com/docs/components/#buttons)  
+ * [Components & Styling](https://ionicframework.com/docs/components)  

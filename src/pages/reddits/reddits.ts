@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RedditService } from '../../app/services/reddit.service';
+import { DetailsPage } from '../details/details';
 
 @Component({
   selector: 'reddits',
@@ -23,8 +24,14 @@ export class RedditsPage {
       console.log(response);
     this.items = response.data.children;    //get "children" data from fetched reddit data
     });
-
   }
+
+  viewItem(item) {  //to switch pages, this viewItem is for navCtrl
+    this.navCtrl.push(DetailsPage, {     //push = go to the DetailsPage when the button is clicked
+      item: item                         //pass the item param
+    });
+  }
+
 }
 
 //memo

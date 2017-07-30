@@ -8,6 +8,19 @@
 
 <ion-content padding>
   This is home(reddit)
+     <ion-list>
+       <ion-item>
+         <ion-label fixed>Category</ion-label>
+         <ion-select (ionChange)="changeCategory()" [(ngModel)]="category" namde="category">   <!--bind ngmodel to the category prop-->
+           <ion-option value="food">Food</ion-option>
+           <ion-option value="news">News</ion-option>
+           <ion-option value="music">Music</ion-option>  
+           <ion-option value="funny">Funny</ion-option>  
+           <ion-option value="gaming">Gaming</ion-option>
+           <ion-option value="art">Art</ion-option>   
+         </ion-select>
+       </ion-item>
+     </ion-list>
      <ion-list>  <!-- want list-->
        <ion-item *ngFor="let item of items">   <!-- *ngFor: for loop-->
           <ion-thumbnail *ngIf="item.data.thumbnail" item-left>

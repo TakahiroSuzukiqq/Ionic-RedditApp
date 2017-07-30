@@ -5,7 +5,7 @@
     
     
 # Issues & Solution  
- * [Error: Uncaught (in promise): Error: No provider for Http!]  (https://forum.ionicframework.com/t/no-provider-for-http-error-in-ionic/85762/2)    
+ * [Error: Uncaught (in promise): Error: No provider for Http!] (https://forum.ionicframework.com/t/no-provider-for-http-error-in-ionic/85762/2)    
    ````
    app.module.ts  
    import { BrowserModule } from '@angular/platform-browser';    

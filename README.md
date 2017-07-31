@@ -43,3 +43,8 @@
 # Ionic Docs  
  * [Installation](http://ionicframework.com/docs/intro/installation/)  
  * [Components & Styling](https://ionicframework.com/docs/components)  
+  
+# Reference  
+ * This app is built with following [this YouTube tutorial](https://www.youtube.com/watch?v=ilM8YorL_jI&t=405s)  
+   
+     
